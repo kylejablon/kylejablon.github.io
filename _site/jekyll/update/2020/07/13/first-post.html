@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>First post and some test | Kyle’s blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="First post and some test" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hello!" />
+<meta property="og:description" content="Hello!" />
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2020/07/13/first-post.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2020/07/13/first-post.html" />
+<meta property="og:site_name" content="Kyle’s blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-13T23:22:41-04:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/jekyll/update/2020/07/13/first-post.html","headline":"First post and some test","dateModified":"2020-07-13T23:22:41-04:00","datePublished":"2020-07-13T23:22:41-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2020/07/13/first-post.html"},"description":"Hello!","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Kyle's blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Kyle&#39;s blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">First post and some test</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-07-13T23:22:41-04:00" itemprop="datePublished">Jul 13, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h3 id="hello">Hello!</h3>
+
+<p>This is a test post. Below is some places I’ve spent some significant time in my life :)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">folium</span>
+<span class="kn">from</span> <span class="nn">folium.plugins</span> <span class="kn">import</span> <span class="n">MarkerCluster</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Define the coordinates we want our markers to be at
+#Define coordinates of where we want to center our map
+</span><span class="n">san_diego_coords</span> <span class="o">=</span> <span class="p">[</span><span class="mf">32.715736</span><span class="p">,</span> <span class="o">-</span><span class="mf">117.161087</span><span class="p">]</span>
+<span class="n">hyde_park</span> <span class="o">=</span> <span class="p">[</span><span class="mf">41.7948</span><span class="p">,</span> <span class="o">-</span><span class="mf">87.5917</span><span class="p">]</span>
+<span class="n">NYC_coords</span> <span class="o">=</span> <span class="p">[</span><span class="mf">40.7282</span><span class="p">,</span> <span class="o">-</span><span class="mf">73.7949</span><span class="p">]</span>
+
+<span class="c1">#Create the map
+</span><span class="n">my_map</span> <span class="o">=</span> <span class="n">folium</span><span class="p">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="n">NYC_coords</span><span class="p">,</span> <span class="n">zoom_start</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1">#Add markers to the map
+</span><span class="n">folium</span><span class="p">.</span><span class="n">Marker</span><span class="p">(</span><span class="n">san_diego_coords</span><span class="p">,</span> <span class="n">popup</span> <span class="o">=</span> <span class="s">'San Diego, CA'</span><span class="p">).</span><span class="n">add_to</span><span class="p">(</span><span class="n">my_map</span><span class="p">)</span>
+<span class="n">folium</span><span class="p">.</span><span class="n">Marker</span><span class="p">(</span><span class="n">hyde_park</span><span class="p">,</span> <span class="n">popup</span> <span class="o">=</span> <span class="s">'Chicago, IL'</span><span class="p">).</span><span class="n">add_to</span><span class="p">(</span><span class="n">my_map</span><span class="p">)</span>
+<span class="n">folium</span><span class="p">.</span><span class="n">Marker</span><span class="p">(</span><span class="n">NYC_coords</span><span class="p">,</span> <span class="n">popup</span> <span class="o">=</span> <span class="s">'Queens, New York'</span><span class="p">).</span><span class="n">add_to</span><span class="p">(</span><span class="n">my_map</span><span class="p">)</span>
+
+<span class="n">my_map</span>
+</code></pre></div></div>
+
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span>&lt;iframe src="about:blank" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" data-html=PCFET0NUWVBFIGh0bWw+CjxoZWFkPiAgICAKICAgIDxtZXRhIGh0dHAtZXF1aXY9ImNvbnRlbnQtdHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PVVURi04IiAvPgogICAgCiAgICAgICAgPHNjcmlwdD4KICAgICAgICAgICAgTF9OT19UT1VDSCA9IGZhbHNlOwogICAgICAgICAgICBMX0RJU0FCTEVfM0QgPSBmYWxzZTsKICAgICAgICA8L3NjcmlwdD4KICAgIAogICAgPHNjcmlwdCBzcmM9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vbGVhZmxldEAxLjYuMC9kaXN0L2xlYWZsZXQuanMiPjwvc2NyaXB0PgogICAgPHNjcmlwdCBzcmM9Imh0dHBzOi8vY29kZS5qcXVlcnkuY29tL2pxdWVyeS0xLjEyLjQubWluLmpzIj48L3NjcmlwdD4KICAgIDxzY3JpcHQgc3JjPSJodHRwczovL21heGNkbi5ib290c3RyYXBjZG4uY29tL2Jvb3RzdHJhcC8zLjIuMC9qcy9ib290c3RyYXAubWluLmpzIj48L3NjcmlwdD4KICAgIDxzY3JpcHQgc3JjPSJodHRwczovL2NkbmpzLmNsb3VkZmxhcmUuY29tL2FqYXgvbGlicy9MZWFmbGV0LmF3ZXNvbWUtbWFya2Vycy8yLjAuMi9sZWFmbGV0LmF3ZXNvbWUtbWFya2Vycy5qcyI+PC9zY3JpcHQ+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vbGVhZmxldEAxLjYuMC9kaXN0L2xlYWZsZXQuY3NzIi8+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vbWF4Y2RuLmJvb3RzdHJhcGNkbi5jb20vYm9vdHN0cmFwLzMuMi4wL2Nzcy9ib290c3RyYXAubWluLmNzcyIvPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL21heGNkbi5ib290c3RyYXBjZG4uY29tL2Jvb3RzdHJhcC8zLjIuMC9jc3MvYm9vdHN0cmFwLXRoZW1lLm1pbi5jc3MiLz4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0cHM6Ly9tYXhjZG4uYm9vdHN0cmFwY2RuLmNvbS9mb250LWF3ZXNvbWUvNC42LjMvY3NzL2ZvbnQtYXdlc29tZS5taW4uY3NzIi8+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vY2RuanMuY2xvdWRmbGFyZS5jb20vYWpheC9saWJzL0xlYWZsZXQuYXdlc29tZS1tYXJrZXJzLzIuMC4yL2xlYWZsZXQuYXdlc29tZS1tYXJrZXJzLmNzcyIvPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL3Jhd2Nkbi5naXRoYWNrLmNvbS9weXRob24tdmlzdWFsaXphdGlvbi9mb2xpdW0vbWFzdGVyL2ZvbGl1bS90ZW1wbGF0ZXMvbGVhZmxldC5hd2Vzb21lLnJvdGF0ZS5jc3MiLz4KICAgIDxzdHlsZT5odG1sLCBib2R5IHt3aWR0aDogMTAwJTtoZWlnaHQ6IDEwMCU7bWFyZ2luOiAwO3BhZGRpbmc6IDA7fTwvc3R5bGU+CiAgICA8c3R5bGU+I21hcCB7cG9zaXRpb246YWJzb2x1dGU7dG9wOjA7Ym90dG9tOjA7cmlnaHQ6MDtsZWZ0OjA7fTwvc3R5bGU+CiAgICAKICAgICAgICAgICAgPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwKICAgICAgICAgICAgICAgIGluaXRpYWwtc2NhbGU9MS4wLCBtYXhpbXVtLXNjYWxlPTEuMCwgdXNlci1zY2FsYWJsZT1ubyIgLz4KICAgICAgICAgICAgPHN0eWxlPgogICAgICAgICAgICAgICAgI21hcF9jYjdkMjQyMjA1YmE0NWU3YThlZmEwYTIxOTNkNmQwZSB7CiAgICAgICAgICAgICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlOwogICAgICAgICAgICAgICAgICAgIHdpZHRoOiAxMDAuMCU7CiAgICAgICAgICAgICAgICAgICAgaGVpZ2h0OiAxMDAuMCU7CiAgICAgICAgICAgICAgICAgICAgbGVmdDogMC4wJTsKICAgICAgICAgICAgICAgICAgICB0b3A6IDAuMCU7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIDwvc3R5bGU+CiAgICAgICAgCjwvaGVhZD4KPGJvZHk+ICAgIAogICAgCiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImZvbGl1bS1tYXAiIGlkPSJtYXBfY2I3ZDI0MjIwNWJhNDVlN2E4ZWZhMGEyMTkzZDZkMGUiID48L2Rpdj4KICAgICAgICAKPC9ib2R5Pgo8c2NyaXB0PiAgICAKICAgIAogICAgICAgICAgICB2YXIgbWFwX2NiN2QyNDIyMDViYTQ1ZTdhOGVmYTBhMjE5M2Q2ZDBlID0gTC5tYXAoCiAgICAgICAgICAgICAgICAibWFwX2NiN2QyNDIyMDViYTQ1ZTdhOGVmYTBhMjE5M2Q2ZDBlIiwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBjZW50ZXI6IFs0MC43MjgyLCAtNzMuNzk0OV0sCiAgICAgICAgICAgICAgICAgICAgY3JzOiBMLkNSUy5FUFNHMzg1NywKICAgICAgICAgICAgICAgICAgICB6b29tOiAzLAogICAgICAgICAgICAgICAgICAgIHpvb21Db250cm9sOiB0cnVlLAogICAgICAgICAgICAgICAgICAgIHByZWZlckNhbnZhczogZmFsc2UsCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICk7CgogICAgICAgICAgICAKCiAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIHRpbGVfbGF5ZXJfNTA3YjgyYzdiMTg0NGQ3YWI3YmY1ZTVlN2EwMmVlMzggPSBMLnRpbGVMYXllcigKICAgICAgICAgICAgICAgICJodHRwczovL3tzfS50aWxlLm9wZW5zdHJlZXRtYXAub3JnL3t6fS97eH0ve3l9LnBuZyIsCiAgICAgICAgICAgICAgICB7ImF0dHJpYnV0aW9uIjogIkRhdGEgYnkgXHUwMDI2Y29weTsgXHUwMDNjYSBocmVmPVwiaHR0cDovL29wZW5zdHJlZXRtYXAub3JnXCJcdTAwM2VPcGVuU3RyZWV0TWFwXHUwMDNjL2FcdTAwM2UsIHVuZGVyIFx1MDAzY2EgaHJlZj1cImh0dHA6Ly93d3cub3BlbnN0cmVldG1hcC5vcmcvY29weXJpZ2h0XCJcdTAwM2VPRGJMXHUwMDNjL2FcdTAwM2UuIiwgImRldGVjdFJldGluYSI6IGZhbHNlLCAibWF4TmF0aXZlWm9vbSI6IDE4LCAibWF4Wm9vbSI6IDE4LCAibWluWm9vbSI6IDAsICJub1dyYXAiOiBmYWxzZSwgIm9wYWNpdHkiOiAxLCAic3ViZG9tYWlucyI6ICJhYmMiLCAidG1zIjogZmFsc2V9CiAgICAgICAgICAgICkuYWRkVG8obWFwX2NiN2QyNDIyMDViYTQ1ZTdhOGVmYTBhMjE5M2Q2ZDBlKTsKICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgbWFya2VyXzUxNGM3MTUyZGFiMjQ1MDRhYjQ3YmQ2MzcyM2UzYmYwID0gTC5tYXJrZXIoCiAgICAgICAgICAgICAgICBbMzIuNzE1NzM2LCAtMTE3LjE2MTA4N10sCiAgICAgICAgICAgICAgICB7fQogICAgICAgICAgICApLmFkZFRvKG1hcF9jYjdkMjQyMjA1YmE0NWU3YThlZmEwYTIxOTNkNmQwZSk7CiAgICAgICAgCiAgICAKICAgICAgICB2YXIgcG9wdXBfNjI4MzczODE1ZmNlNDE1ZGExNjIxODE2M2UyOTJhNTIgPSBMLnBvcHVwKHsibWF4V2lkdGgiOiAiMTAwJSJ9KTsKCiAgICAgICAgCiAgICAgICAgICAgIHZhciBodG1sX2ZlZjhhNjA4OWUzZjQzMDliNjQxMzA0MGQyZGY4ZjFhID0gJChgPGRpdiBpZD0iaHRtbF9mZWY4YTYwODllM2Y0MzA5YjY0MTMwNDBkMmRmOGYxYSIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+U2FuIERpZWdvLCBDQTwvZGl2PmApWzBdOwogICAgICAgICAgICBwb3B1cF82MjgzNzM4MTVmY2U0MTVkYTE2MjE4MTYzZTI5MmE1Mi5zZXRDb250ZW50KGh0bWxfZmVmOGE2MDg5ZTNmNDMwOWI2NDEzMDQwZDJkZjhmMWEpOwogICAgICAgIAoKICAgICAgICBtYXJrZXJfNTE0YzcxNTJkYWIyNDUwNGFiNDdiZDYzNzIzZTNiZjAuYmluZFBvcHVwKHBvcHVwXzYyODM3MzgxNWZjZTQxNWRhMTYyMTgxNjNlMjkyYTUyKQogICAgICAgIDsKCiAgICAgICAgCiAgICAKICAgIAogICAgICAgICAgICB2YXIgbWFya2VyX2JhN2ZhZWI1MzBjODRlZGNiZWIzOTVlMzc2NWM3ZmU3ID0gTC5tYXJrZXIoCiAgICAgICAgICAgICAgICBbNDEuNzk0OCwgLTg3LjU5MTddLAogICAgICAgICAgICAgICAge30KICAgICAgICAgICAgKS5hZGRUbyhtYXBfY2I3ZDI0MjIwNWJhNDVlN2E4ZWZhMGEyMTkzZDZkMGUpOwogICAgICAgIAogICAgCiAgICAgICAgdmFyIHBvcHVwXzE2ZjYwYjEyYjcxODRkMjU5MmY4Yzg4YjkzYjFmNjViID0gTC5wb3B1cCh7Im1heFdpZHRoIjogIjEwMCUifSk7CgogICAgICAgIAogICAgICAgICAgICB2YXIgaHRtbF8xNzc3YWJhNWIzMjk0ZWE0YTlmMDc2YjU3YTFjMjllYSA9ICQoYDxkaXYgaWQ9Imh0bWxfMTc3N2FiYTViMzI5NGVhNGE5ZjA3NmI1N2ExYzI5ZWEiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPkNoaWNhZ28sIElMPC9kaXY+YClbMF07CiAgICAgICAgICAgIHBvcHVwXzE2ZjYwYjEyYjcxODRkMjU5MmY4Yzg4YjkzYjFmNjViLnNldENvbnRlbnQoaHRtbF8xNzc3YWJhNWIzMjk0ZWE0YTlmMDc2YjU3YTFjMjllYSk7CiAgICAgICAgCgogICAgICAgIG1hcmtlcl9iYTdmYWViNTMwYzg0ZWRjYmViMzk1ZTM3NjVjN2ZlNy5iaW5kUG9wdXAocG9wdXBfMTZmNjBiMTJiNzE4NGQyNTkyZjhjODhiOTNiMWY2NWIpCiAgICAgICAgOwoKICAgICAgICAKICAgIAogICAgCiAgICAgICAgICAgIHZhciBtYXJrZXJfYWFjZTA0NDI2ZTQ5NDE5MWI0YzdmODhlZGFjYjdmYTEgPSBMLm1hcmtlcigKICAgICAgICAgICAgICAgIFs0MC43MjgyLCAtNzMuNzk0OV0sCiAgICAgICAgICAgICAgICB7fQogICAgICAgICAgICApLmFkZFRvKG1hcF9jYjdkMjQyMjA1YmE0NWU3YThlZmEwYTIxOTNkNmQwZSk7CiAgICAgICAgCiAgICAKICAgICAgICB2YXIgcG9wdXBfZDczNzllMWFmYTU1NDVlZDkzZjliMDc4YWU3NTFkY2IgPSBMLnBvcHVwKHsibWF4V2lkdGgiOiAiMTAwJSJ9KTsKCiAgICAgICAgCiAgICAgICAgICAgIHZhciBodG1sX2ZiNDVlMjU3MzJjZTQ2OWZhMjk2ODdhNzZlNTA5YmY5ID0gJChgPGRpdiBpZD0iaHRtbF9mYjQ1ZTI1NzMyY2U0NjlmYTI5Njg3YTc2ZTUwOWJmOSIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+UXVlZW5zLCBOZXcgWW9yazwvZGl2PmApWzBdOwogICAgICAgICAgICBwb3B1cF9kNzM3OWUxYWZhNTU0NWVkOTNmOWIwNzhhZTc1MWRjYi5zZXRDb250ZW50KGh0bWxfZmI0NWUyNTczMmNlNDY5ZmEyOTY4N2E3NmU1MDliZjkpOwogICAgICAgIAoKICAgICAgICBtYXJrZXJfYWFjZTA0NDI2ZTQ5NDE5MWI0YzdmODhlZGFjYjdmYTEuYmluZFBvcHVwKHBvcHVwX2Q3Mzc5ZTFhZmE1NTQ1ZWQ5M2Y5YjA3OGFlNzUxZGNiKQogICAgICAgIDsKCiAgICAgICAgCiAgICAKPC9zY3JpcHQ+ onload="this.contentDocument.open();this.contentDocument.write(atob(this.getAttribute('data-html')));this.contentDocument.close();" allowfullscreen webkitallowfullscreen mozallowfullscreen&gt;&lt;/iframe&gt;</div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+  </div><a class="u-url" href="/jekyll/update/2020/07/13/first-post.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Kyle&#39;s blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Kyle&#39;s blog</li><li><a class="u-email" href="mailto:example@example.com">example@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/kylej1994"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">kylej1994</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>I&#39;m Kyle!</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+I"�<h1 id="installing-scip--pyscipopt-on-an-ec2-instance">Installing SCIP &amp; PySCIPOpt on an EC2 instance</h1>
+
+<p><strong>What is SCIP, and PySCIPOpt?</strong></p>
+
+<p>SCIP is a free solver for Mixed Integer Programming (MIPS), and Mixed Integer NonLinear Programming (MINLP). It is written in C, and callable by C++. PySCIPOpt is a python wrapper around these same functions. While scipy has some nice built in optimization techniques, the inputs take in vectorized floating point integers. If you want to model a binary outcome, there are <a href="https://stackoverflow.com/questions/35764439/scipy-minimize-how-to-restrict-x-only-to-0-and-1">some hacks you can implement</a>, but you’re largely out of luck.</p>
+
+<p><strong>Why is installing them a problem?</strong></p>
+
+<p>Installation of scientific computation libraries is notoriously difficult. I found myself mightily struggling with installing SCIP on an EC2 instance. I found that I was forced to use SCIP, because of its support for mixed integer programming (MIP) problems. There are other commercial options, but SCIP is free! The whole process took about a day to work through. I can only share my experience tyring to set it up on an EC2 instance.</p>
+
+<p>There are some weird extenuating circumstances at play here that make the whole experience a bit more painful than it ought to be. <code class="language-plaintext highlighter-rouge">SCIP</code> requires the a relatively recent version of <code class="language-plaintext highlighter-rouge">cmake</code>, and requires <code class="language-plaintext highlighter-rouge">boost</code>. Both of these libraries, for whatever reason, do not play very nicely with the EC2 OS.</p>
+
+<p>In any case, here’s what I did. Start in a root directory, and install as many of your system depdency libraries as you can using basic package managers:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Install base dependencies
+sudo pip3 install Cython
+sudo apt-get install -y build-essential curl file git linuxbrew-wrapper libblkid-dev e2fslibs-dev libboost-all-dev libaudit-dev libspatialindex-dev
+brew install icu4c
+brew upgrade icu4c
+brew install boost
+brew upgrade boost
+</code></pre></div></div>
+
+<p>The next step is to install cmake. Simply installing cmake from the command line will install an older version of cmake. Thus, we need to clone and manually install it ourself.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Install cmake
+wget https://github.com/Kitware/CMake/releases/download/v3.17.2/cmake-3.17.2.tar.gz 
+tar -xvf cmake-3.17.2.tar.gz 
+cd cmake-3.17.2
+./bootstrap
+make
+sudo make install
+cd ..
+rm cmake-3.17.2.tar.gz 
+rm -rf cmake-3.17.2 
+</code></pre></div></div>
+
+<p>Next, we install the SCIP optimization suite. The optimization suite really simplifies the whole installation process. I assume that the tar file is already installed. To my knowledge, there is no way to just <code class="language-plaintext highlighter-rouge">wget</code> the installation suite.  The link can be found <a href="https://scipopt.org/#download">here</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Download &amp; Install SCIP using scipoptsuite
+grep scipoptsuite-7.0.0.tgz -- check that copy of the installation suite is here.
+tar -xvf scipoptsuite-7.0.0.tgz
+rm scipoptsuite-7.0.0.tgz
+
+cd scipoptsuite-7.0.0
+mkdir build
+cd build/
+cmake ..
+cd scip/
+make
+make check
+sudo make install
+</code></pre></div></div>
+
+<p>Finally, install PySCIPOpt,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Install PySCIPOpt
+cd
+git clone https://github.com/SCIP-Interfaces/PySCIPOpt.git
+cd PySCIPOpt/
+SCIPOPTDIR=./ python setup.py install
+</code></pre></div></div>
+
+<p>In the event you still have issues running PySCIPOpt, and see an error regarding a missing <code class="language-plaintext highlighter-rouge">libscip.so</code> file. You should copy-paste your <code class="language-plaintext highlighter-rouge">libscip.so</code> file installed by the SCIP optimization suite, likeso.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo cp /usr/local/lib/libscip.so.7.0 /lib/x86_64-linux-gnu/ # copy-paste libscip.so.7.0 file
+</code></pre></div></div>
+
+<p>Hopefully, this helps someone else as much as I know it would have helped me!</p>
+
+<h3 id="relevant-links">Relevant Links</h3>
+
+<ul>
+  <li><a href="https://github.com/SCIP-Interfaces/PySCIPOpt/blob/master/INSTALL.md">PySCIPOpt Install Guide</a></li>
+  <li><a href="https://gcg.or.rwth-aachen.de/doc/INSTALL.html">Another guide on installing SCIP</a></li>
+</ul>
+:ET

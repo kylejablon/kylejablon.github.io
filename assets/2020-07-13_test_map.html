@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d77bb81f0c4c479bb367490a0617c198 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_d77bb81f0c4c479bb367490a0617c198" ></div>
+        
+</body>
+<script>    
+    
+            var map_d77bb81f0c4c479bb367490a0617c198 = L.map(
+                "map_d77bb81f0c4c479bb367490a0617c198",
+                {
+                    center: [40.7282, -73.7949],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0adbd7835ab74ba691f444b99a5e1b4b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d77bb81f0c4c479bb367490a0617c198);
+        
+    
+            var marker_83e1c2bbdc954dde942c2f2451b911eb = L.marker(
+                [32.715736, -117.161087],
+                {}
+            ).addTo(map_d77bb81f0c4c479bb367490a0617c198);
+        
+    
+        var popup_ef2bcc388f024036ae644b1e70c08ebd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0aca6e1d259f47e389327a86468e9493 = $(`<div id="html_0aca6e1d259f47e389327a86468e9493" style="width: 100.0%; height: 100.0%;">San Diego, CA</div>`)[0];
+            popup_ef2bcc388f024036ae644b1e70c08ebd.setContent(html_0aca6e1d259f47e389327a86468e9493);
+        
+
+        marker_83e1c2bbdc954dde942c2f2451b911eb.bindPopup(popup_ef2bcc388f024036ae644b1e70c08ebd)
+        ;
+
+        
+    
+    
+            var marker_9dad871f30e44c289d6eee6717cd805f = L.marker(
+                [41.7948, -87.5917],
+                {}
+            ).addTo(map_d77bb81f0c4c479bb367490a0617c198);
+        
+    
+        var popup_d6747d58b0bb4a13ae2da88018a4e67e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_17cc43b035d54c75bd7168467c5aa853 = $(`<div id="html_17cc43b035d54c75bd7168467c5aa853" style="width: 100.0%; height: 100.0%;">Chicago, IL</div>`)[0];
+            popup_d6747d58b0bb4a13ae2da88018a4e67e.setContent(html_17cc43b035d54c75bd7168467c5aa853);
+        
+
+        marker_9dad871f30e44c289d6eee6717cd805f.bindPopup(popup_d6747d58b0bb4a13ae2da88018a4e67e)
+        ;
+
+        
+    
+    
+            var marker_06b6a3d7052e4fd99b9e104d8d514440 = L.marker(
+                [40.7282, -73.7949],
+                {}
+            ).addTo(map_d77bb81f0c4c479bb367490a0617c198);
+        
+    
+        var popup_45206cb33da84572bb60c84d6271da94 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b93e5dd50a084f41953bd3507346a926 = $(`<div id="html_b93e5dd50a084f41953bd3507346a926" style="width: 100.0%; height: 100.0%;">Queens, New York</div>`)[0];
+            popup_45206cb33da84572bb60c84d6271da94.setContent(html_b93e5dd50a084f41953bd3507346a926);
+        
+
+        marker_06b6a3d7052e4fd99b9e104d8d514440.bindPopup(popup_45206cb33da84572bb60c84d6271da94)
+        ;
+
+        
+    
+</script>

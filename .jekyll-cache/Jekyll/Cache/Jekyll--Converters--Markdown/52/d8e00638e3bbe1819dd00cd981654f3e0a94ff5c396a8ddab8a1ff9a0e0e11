@@ -1,0 +1,24 @@
+I"k<h2 id="hi-im-kyle">Hi, I’m Kyle</h2>
+
+<p><img src="/assets/github_pic.jpg" alt="" height="50%" width="50%" /></p>
+
+<p>I’m Kyle Jablon. I currently work at GrubHub on the e-commerce data science team. I’m also a ‘17 UChicago grad.</p>
+
+<h3 id="the-stack-im-used-to-working-in">The stack I’m used to working in.</h3>
+
+<p>I’ve been using Python, Pandas, and Spark since 2016, and their associated toolkits.</p>
+
+<p>Other stuff I use a lot: sklearn, xgBoost, SHAP, Jenkins, Azkaban, docker, Dask</p>
+
+<p>Stuff I’m trying to pick-up: Tensorflow</p>
+
+<h3 id="some-public-stuff-ive-worked-on">Some public stuff I’ve worked on</h3>
+
+<ul>
+  <li>A blog post on <a href="https://bytes.grubhub.com/just-what-i-needed-making-machine-learning-scalable-and-accessible-at-grubhub-24734cc4139d">productionizing machine learning models at GrubHub</a></li>
+</ul>
+
+<h3 id="support-or-contact">Support or Contact</h3>
+
+<p>If you have business opportunities contact me on my <a href="https://www.linkedin.com/in/kylejablon/">linkedin</a>. If you need to email me for whatever reason, you can reach me at kyjablon [at] grubhub [com]</p>
+:ET
