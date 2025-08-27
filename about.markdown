@@ -36,10 +36,9 @@ LLM Tools I really like: Pydantic, VLLM.
 
 - **Improving Slack's new user flow with ML:** Launching the first ML models for improving our new user flows to bootstrap the new user flow with recommendations. Unfortunately, there was no public blog post for it's release, but our product designer Mehgan Iulo wrote a great introduction to [Slack's joiner launchpad](https://mehgan.com/projects/joiner-launchpad.html). 
 
-- A blog post on [productionizing machine learning models at GrubHub](https://bytes.grubhub.com/just-what-i-needed-making-machine-learning-scalable-and-accessible-at-grubhub-24734cc4139d)
+- **ML Ethics Wiki at Georgia Tech**: I worked on a [machine learning ethics wiki](https://kylej1994.github.io/ml_ethics_wiki/) for my Masters class at Georgia Tech (OMSCS 6460: Education Technology). You can also view my [final presentation](https://drive.google.com/file/d/1RQpeGBAXGq4-BbpkztCL8TmDN43Oijeo/view?usp=sharing) for the class on my google drive.
 
-- I worked on a [machine learning ethics wiki](https://kylej1994.github.io/ml_ethics_wiki/) for my Masters class at Georgia Tech (OMSCS 6460: Education Technology). You can also view my [final presentation](https://drive.google.com/file/d/1RQpeGBAXGq4-BbpkztCL8TmDN43Oijeo/view?usp=sharing) for the class on my google drive.
-
+- **Intro to ML deployment at GrubHub:** A blog post on [productionizing machine learning models at GrubHub](https://bytes.grubhub.com/just-what-i-needed-making-machine-learning-scalable-and-accessible-at-grubhub-24734cc4139d)
 
 ### Support or Contact
 
