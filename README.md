@@ -1,3 +1,4 @@
-## Hi, I'm Kyle
+Hi, I'm Kyle
 
-This is my blog. Read about me [here](https://kylej1994.github.io/about/), and see the posts [here](https://kylej1994.github.io/).
+[About me](https://kylej1994.github.io/about/)
+[Assorted posts](https://kylej1994.github.io/)
